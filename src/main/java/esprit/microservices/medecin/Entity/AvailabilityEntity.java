@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.DayOfWeek;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "availability")
@@ -16,8 +17,7 @@ import java.util.List;
 
 public class AvailabilityEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
 
     @Enumerated(EnumType.STRING)
     private DayOfWeek dayOfWeek;

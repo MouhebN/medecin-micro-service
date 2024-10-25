@@ -13,6 +13,7 @@ import org.mapstruct.Mapping;
 public interface MedecinMapper {
 
     @Mapping(target = "id", expression = "java(UUID.randomUUID())")
+    @Mapping(target = "availability", ignore = true)
     MedecinEntity toEntity(CreateMedecinRequest createMedecinRequest);
 
     CreateMedecinResponse toResponse(MedecinEntity medecin);

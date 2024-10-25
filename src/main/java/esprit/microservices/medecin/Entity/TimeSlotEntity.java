@@ -5,16 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Entity
 @Table(name = "time_slots")
-@Data // Generates getters, setters, toString, equals, and hashCode
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class TimeSlotEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
 
-    private String startTime; // Format: "HH:mm"
-    private String endTime; // Format: "HH:mm"
+    private String startTime;
+    private String endTime;
 }

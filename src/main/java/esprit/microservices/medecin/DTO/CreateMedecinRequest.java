@@ -1,7 +1,5 @@
 package esprit.microservices.medecin.DTO;
 
-import java.util.UUID;
-
 public record CreateMedecinRequest(
         String firstName,
         String lastName,
